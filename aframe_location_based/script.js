@@ -55,14 +55,18 @@ var setModel = function (model, entity) {
     if (model.scale) {
         entity.setAttribute('scale', model.scale);
     }
-
-    if (model.rotation) {
-        entity.setAttribute('rotation', model.rotation);
-    }
+    /* 
+        if (model.rotation) {
+            entity.setAttribute('rotation', model.rotation);
+        } */
 
     if (model.position) {
         entity.setAttribute('position', model.position);
     }
+
+    entity.setAttribute('look-at', '[gps-camera]');
+    console.log('entity: ', entity);
+    console.log('entity look-at: ', entity['look-at']);
 
     entity.setAttribute('gltf-model', model.url);
 

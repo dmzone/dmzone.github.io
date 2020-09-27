@@ -11,16 +11,6 @@
     right: 0;
 }
 
-.top.coords {
-    height: 20%;
-    position: fixed;
-    top: 0%;
-    width: 100%;
-    margin: 0px auto;
-    left: 0;
-    right: 0;
-}
-
 button {
     display: flex;
     align-items: center;
