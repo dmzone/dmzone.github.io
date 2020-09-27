@@ -4,6 +4,20 @@ window.onload = () => {
 
     let places = staticLoadPlaces();
     renderPlaces(places);
+    //
+    setInterval(function () {
+        var x = document.getElementById('phoneCoords');
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                var pos = navigator.geolocation.getCurrentPosition();
+                x.innerHTML = "Latitude: " + position.coords.latitude +
+                    "<br>Longitude: " + position.coords.longitude;
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+    }, 1000);
 };
 
 function staticLoadPlaces() {
