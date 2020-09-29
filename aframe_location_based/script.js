@@ -35,21 +35,24 @@ var models = [{
         scale: '0.5 0.5 0.5',
         info: 'Magnemite, Lv. 5, HP 10/10',
         rotation: '0 180 0',
-        sound: './assets/magnemite/sound/_sound.mp3'
+        soundSrc: './assets/magnemite/audio/_audio.mp3',
+        soundAutoplay: true,
     },
     {
         url: './assets/articuno/scene.gltf',
         scale: '0.2 0.2 0.2',
         rotation: '0 180 0',
         info: 'Articuno, Lv. 80, HP 100/100',
-        sound: './assets/articuno/sound/_sound.mp3'
+        soundSrc: './assets/articuno/audio/_audio.mp3',
+        soundAutoplay: true,
     },
     {
         url: './assets/dragonite/scene.gltf',
         scale: '0.08 0.08 0.08',
         rotation: '0 180 0',
         info: 'Dragonite, Lv. 99, HP 150/150',
-        sound: './assets/dragonite/sound/_sound.mp3',
+        soundSrc: './assets/dragonite/audio/_audio.mp3',
+        soundAutoplay: true,
     },
 ];
 
@@ -68,7 +71,7 @@ var setModel = function (model, entity) {
     }
 
     if (model.sound) {
-        entity.setAttribute('sound', model.sound);
+        entity.setAttribute('sound', 'src: url(' + model.soundSrc + '); autoplay: true;');
     }
 
     entity.setAttribute('look-at', '[gps-camera]');
@@ -78,7 +81,6 @@ var setModel = function (model, entity) {
     entity.setAttribute('gltf-model', model.url);
     entity.setAttribute('look-at', '[gps-camera]');
 
-    entity.setAttribute('sound', )
 
     const div = document.querySelector('.instructions');
     div.innerText = model.info;
