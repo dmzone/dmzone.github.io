@@ -58,6 +58,7 @@ var models = [{
 
 var modelIndex = 0;
 var setModel = function (model, entity) {
+    console.log('curr model: ', model);
     if (model.scale) {
         entity.setAttribute('scale', model.scale);
     }
