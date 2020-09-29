@@ -49,7 +49,7 @@ var models = [{
         scale: '0.08 0.08 0.08',
         rotation: '0 180 0',
         info: 'Dragonite, Lv. 99, HP 150/150',
-        url: './assets/dragonite/sound/_sound.mp3',
+        sound: './assets/dragonite/sound/_sound.mp3',
     },
 ];
 
@@ -65,6 +65,10 @@ var setModel = function (model, entity) {
 
     if (model.position) {
         entity.setAttribute('position', model.position);
+    }
+
+    if (model.sound) {
+        entity.setAttribute('sound', model.sound);
     }
 
     entity.setAttribute('look-at', '[gps-camera]');
