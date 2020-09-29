@@ -66,11 +66,12 @@ var setModel = function (model, entity) {
             entity.setAttribute('rotation', model.rotation);
         } */
 
-    if (model.position) {
+    /* if (model.position) {
         entity.setAttribute('position', model.position);
-    }
+    } */
 
     if (model.soundSrc) {
+        console.log('model has sound');
         entity.setAttribute('sound', 'src: url(' + model.soundSrc + '); autoplay: true;');
     }
 
