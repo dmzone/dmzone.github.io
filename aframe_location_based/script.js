@@ -30,6 +30,7 @@ function staticLoadPlaces() {
     }, ];
 }
 
+// models props
 var models = [{
         url: './assets/magnemite/scene.gltf',
         scale: '0.5 0.5 0.5',
