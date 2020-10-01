@@ -74,7 +74,7 @@ var setModel = function (model, entity) {
 
     if (model.soundSrc) {
         console.log('model has sound');
-        entity.setAttribute('sound', 'src: url(' + model.soundSrc + '); autoplay: ' + model.soundAutoplay + ';');
+        entity.setAttribute('sound', 'src: url(' + model.soundSrc + '); autoplay: ' + model.soundAutoplay + '; on: click"');
     }
 
     entity.setAttribute('look-at', '[gps-camera]');
